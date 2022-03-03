@@ -7,6 +7,7 @@ import { BuyerComponent } from './buyer/buyer.component';
 import { CustomerComponent } from './customer/customer.component';
 import { SellerComponent } from './seller/seller.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
