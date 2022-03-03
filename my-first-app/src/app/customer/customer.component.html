@@ -24,7 +24,7 @@
                 <td>{{customer.email}}</td>
                 <td>{{customer.phone_number}}</td>
                 <td>
-                    <button class="btn btn-primary" type="button" (click)="open(content)">Load</button>
+                    <button class="btn btn-primary" type="button" (click)="open(content, customer)">Load</button>
                 </td>
             </tr>
         </tbody>
@@ -39,68 +39,76 @@
         <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div class="modal-body">
-        <form>
-            <div class="mb-3">
-                <form [formGroup]="CustomerForm" (ngSubmit)="CustomerFormData()">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label>First Name</label>
-                            <input type="text" class="form-control" formControlName="FirstName">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Last Name</label>
-                            <input type="text" class="form-control" formControlName="LastName">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Current Address</label>
-                        <input type="text" class="form-control" formControlName="CurrentAddress">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label>City</label>
-                            <input type="text" class="form-control" formControlName="CurrentCity">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label>State</label>
-                            <input type="text" class="form-control" formControlName="CurrentState">
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label>Zip</label>
-                            <input type="text" class="form-control" formControlName="CurrentZip">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Parmanent Address</label>
-                        <input type="text" class="form-control" formControlName="ParmanentAddress">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label>City</label>
-                            <input type="text" class="form-control" formControlName="ParmanentCity">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label>State</label>
-                            <input type="text" class="form-control" formControlName="ParmanentState">
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label>Zip</label>
-                            <input type="text" class="form-control" formControlName="ParmanentZip">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label>Email</label>
-                            <input type="email" class="form-control" formControlName="Email">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Phone Number</label>
-                            <input type="password" class="form-control" formControlName="PhoneNumber">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Add</button>
-                </form>
+        <form [formGroup]="myForm" (ngSubmit)="CustomerFormData()">
+            <div class="form-row row">
+                <div class="form-group col-md-6">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" formControlName="FirstName">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" formControlName="LastName">
+                </div>
             </div>
+            <div class="form-group col-md-4">
+                <label>Birth Date</label>
+                <input type="date" class="form-control" formControlName="Birthdate" [value]="currentDate">
+            </div><br>
+            <div class="form-group">
+                <label>Current Address</label>
+                <input type="text" class="form-control" formControlName="CurrentAddress">
+            </div>
+            <div class="form-row row">
+                <div class="form-group col-md-2">
+                    <label>House Number</label>
+                    <input type="text" class="form-control" formControlName="CurrenthouseNo">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>City</label>
+                    <input type="text" class="form-control" formControlName="CurrentCity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>State</label>
+                    <input type="text" class="form-control" formControlName="CurrentState">
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Zip</label>
+                    <input type="text" class="form-control" formControlName="CurrentZip">
+                </div>
+            </div><br><br>
+            <div class="form-group">
+                <label>Parmanent Address</label>
+                <input type="text" class="form-control" formControlName="ParmanentAddress">
+            </div>
+            <div class="form-row row">
+                <div class="form-group col-md-2">
+                    <label>House Number</label>
+                    <input type="text" class="form-control" formControlName="ParmanenthouseNo">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>City</label>
+                    <input type="text" class="form-control" formControlName="ParmanentCity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>State</label>
+                    <input type="text" class="form-control" formControlName="ParmanentState">
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Zip</label>
+                    <input type="text" class="form-control" formControlName="ParmanentZip">
+                </div>
+            </div><br>
+            <div class="form-row row">
+                <div class="form-group col-md-6">
+                    <label>Email</label>
+                    <input type="email" class="form-control" formControlName="Email">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Phone Number</label>
+                    <input type="password" class="form-control" formControlName="PhoneNumber">
+                </div>
+            </div><br>
+            <button type="submit" class="btn btn-primary">Add</button>
         </form>
     </div>
     <div class="modal-footer">
@@ -109,6 +117,6 @@
 </ng-template>
 
 
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+<!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button> -->
 <p>customer works!</p>
 <a routerLink="form">add customer</a>
