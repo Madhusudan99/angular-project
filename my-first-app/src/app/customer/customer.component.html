@@ -1,1 +1,59 @@
-<p>customer works!</p>
+<div class="container">
+    <table class="table table-hover mt-5">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">DOB</th>
+                <th scope="col">City</th>
+                <th scope="col">Zipcode</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customerList">
+                <th scope="row">{{customer.id}}</th>
+                <td>{{customer.first_name}}</td>
+                <td>{{customer.last_name}}</td>
+                <td>{{customer.date_of_birth}}</td>
+                <td>{{customer.current_address.city}}</td>
+                <td>{{customer.current_address.zipcode}}</td>
+                <td>{{customer.email}}</td>
+                <td>{{customer.phone_number}}</td>
+                <td>
+                    <button class="btn btn-primary" type="button" (click)="open(content)">Load</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Update Data</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="mb-3">
+                <label for="dateOfBirth">Date of birth</label>
+                <div class="input-group">
+                    <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker
+                        #dp="ngbDatepicker">
+                    <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+    </div>
+</ng-template>
+
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
