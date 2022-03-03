@@ -8,6 +8,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { SellerComponent } from './seller/seller.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
