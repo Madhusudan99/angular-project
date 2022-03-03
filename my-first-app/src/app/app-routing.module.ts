@@ -7,6 +7,7 @@ import { ProductComponent } from './product/product.component';
 import { SellerComponent } from './seller/seller.component';
 
 const routes: Routes = [
+  {path:'',component:CustomerComponent},
   {path:'customer',component:CustomerComponent},
   {path:'product',component:ProductComponent},
   {path:'buyer',component:BuyerComponent},
