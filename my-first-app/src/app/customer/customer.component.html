@@ -1,4 +1,5 @@
 <div class="container">
+    
     <table class="table table-hover mt-5">
         <thead>
             <tr>
@@ -32,10 +33,15 @@
 
 </div>
 
+<div class="container mt-3">
+    <button class="btn btn-success" style="width: 100%;" type="button" (click)="open(content, false)">Insert</button>
+</div>
+
 
 <ng-template #content let-modal>
     <div class="modal-header">
-        <h4 class="modal-title" id="modal-basic-title">Update Data</h4>
+        <h4 class="modal-title" id="modal-basic-title" *ngIf="!formIsNew">Update Data</h4>
+        <h4 class="modal-title" id="modal-basic-title" *ngIf="formIsNew">Insert Data</h4>
         <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div class="modal-body">
@@ -52,7 +58,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label>Birth Date</label>
-                <input type="date" class="form-control" formControlName="Birthdate" [value]="currentDate">
+                <input type="date" class="form-control" formControlName="Birthdate">
             </div><br>
             <div class="form-group">
                 <label>Current Address</label>
@@ -105,15 +111,18 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label>Phone Number</label>
-                    <input type="password" class="form-control" formControlName="PhoneNumber">
+                    <input type="text" class="form-control" formControlName="PhoneNumber">
                 </div>
             </div><br>
-            <button type="submit" class="btn btn-primary">Add</button>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-danger" *ngIf="!formIsNew">Delete</button>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </div>
         </form>
     </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-    </div>
+
 </ng-template>
 
 
