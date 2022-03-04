@@ -1,2 +1,99 @@
 <p>product works!</p>
+<div class="container">
+    
+    <table class="table table-hover mt-5">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Discription</th>
+                <th scope="col">Units Available</th>
+                <th scope="col">Height</th>
+                <th scope="col">Width</th>
+                <th scope="col">Price</th>
+                <th scope="col">Rating</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productList">
+                <th scope="row">{{product.id}}</th>
+                <td>{{product.product_name}}</td>
+                <td>{{product.product_category}}</td>
+                <td>{{product.product_description}}</td>
+                <td>{{product.units_available}}</td>
+                <td>{{product.height}}</td>
+                <td>{{product.width}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.rating}}</td>
+                <td>
+                    <button class="btn btn-primary" type="button" (click)="open(content, product)">Load</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<div class="container mt-3">
+    <button class="btn btn-success" style="width: 100%;" type="button" (click)="open(content, false)">Insert</button>
+</div>
+
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title" *ngIf="!formIsNew">Update Data</h4>
+        <h4 class="modal-title" id="modal-basic-title" *ngIf="formIsNew">Insert Data</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="productForm" (ngSubmit)="ProductFormData()">
+            <div class="form-row row">
+                <div class="form-group col-md-6">
+                    <label>Product Name</label>
+                    <input type="text" class="form-control" formControlName="productName">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Category</label>
+                    <input type="text" class="form-control" formControlName="category">
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Product Description</label>
+                <input type="date" class="form-control" formControlName="description">
+            </div><br>
+            <div class="form-group">
+                <label>Units Available</label>
+                <input type="text" class="form-control" formControlName="unitsAvailable">
+            </div>
+            <div class="form-row row">
+                <div class="form-group col-md-2">
+                    <label>Height</label>
+                    <input type="text" class="form-control" formControlName="height">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Width</label>
+                    <input type="text" class="form-control" formControlName="width">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Price</label>
+                    <input type="text" class="form-control" formControlName="price">
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Rating</label>
+                    <input type="text" class="form-control" formControlName="rating">
+                </div>
+            </div><br><br>
+            <br>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-danger" *ngIf="!formIsNew">Delete</button>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </div>
+        </form>
+    </div>
+
+</ng-template>
 
