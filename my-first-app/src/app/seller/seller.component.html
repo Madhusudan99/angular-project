@@ -14,8 +14,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let seller of SellerList">
-                <th scope="row">{{seller.id}}</th>
+            <tr *ngFor="let seller of SellerList; let i =index">
+                <th scope="row">{{i+1}}</th>
                 <td>{{seller.seller_name}}</td>
                 <td>{{seller.seller_address.city}}</td>
                 <td>{{seller.seller_address.zipcode}}</td>
@@ -46,7 +46,7 @@
     </div>
 
 <div class="modal-body">
-    <form [formGroup]="SellerForm" (ngSubmit)="SellerFormData()">
+    <form [formGroup]="SellerForm" *ngIf="!formIsNew" (ngSubmit)="SellerFormData()">
         <div class="form-row row">
             <div class="form-group col">
                 <label>Seller Name</label>
@@ -92,5 +92,55 @@
 
         </div>
     </form>
+
+
+    <form [formGroup]="SellerForm" *ngIf="formIsNew" (ngSubmit)="postSellerFormData()">
+        <div class="form-row row">
+            <div class="form-group col">
+                <label>Seller Name</label>
+                <input type="text" class="form-control" formControlName="seller_name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Address</label>
+            <input type="text" class="form-control" formControlName="street">
+        </div>
+        <div class="form-row row">
+            <div class="form-group col-md-4">
+                <label>House Number</label>
+                <input type="text" class="form-control" formControlName="suite">
+            </div>
+            <div class="form-group col-md-4">
+                <label>City</label>
+                <input type="text" class="form-control" formControlName="city">
+            </div>
+            <div class="form-group col-md-4">
+                <label>Zip</label>
+                <input type="text" class="form-control" formControlName="zipcode">
+            </div>
+        </div><br><br>
+        <div class="form-group">
+            <label>Website</label>
+            <input type="text" class="form-control" formControlName="website">
+        </div>
+        <div class="form-row row">
+            <div class="form-group col-md-6">
+                <label>Email</label>
+                <input type="email" class="form-control" formControlName="seller_email">
+            </div>
+            <div class="form-group col-md-6">
+                <label>Phone Number</label>
+                <input type="text" class="form-control" formControlName="phone">
+            </div>
+        </div><br>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" *ngIf="!formIsNew" (click)="deleteSeller()">Delete</button>
+
+            <button type="submit" class="btn btn-primary" (click)="modal.dismiss('Cross click')">Submit</button>
+
+        </div>
+    </form>
+
+
 </div>
 </ng-template>

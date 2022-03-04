@@ -86,6 +86,30 @@ export class SellerComponent implements OnInit {
 
     this.dS.putSellerData(this.cleanedFormData).subscribe((data) => console.log(data));
   }
+
+
+  postSellerFormData(){
+    console.log(this.SellerForm.value);
+    this.cleanedFormData = {
+      "id": this.SellerForm.value.id,
+      "seller_name": this.SellerForm.value.seller_name,
+      "seller_email": this.SellerForm.value.seller_email,
+    "seller_address": {
+      "street": this.SellerForm.value.street,
+      "suite": this.SellerForm.value.suite,
+      "city": this.SellerForm.value.city,
+      "zipcode": this.SellerForm.value.zipcode
+    },
+    "phone": this.SellerForm.value.phone,
+    "website": this.SellerForm.value.website
+    }
+
+    console.log(this.cleanedFormData);
+
+    this.dS.postSellerData(this.cleanedFormData).subscribe((data) => console.log(data));
+
+  }
+
   // currentDate:any;
   objectToFormData(objData: any) {
     // this.myForm.FirstName = objData.first_name;
