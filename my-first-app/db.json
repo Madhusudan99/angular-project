@@ -411,5 +411,128 @@
       "phone": "0246483804",
       "website": "ambrose.net"
     }
+  ],
+  "product": [
+    {
+      "id": 3,
+      "product_name": "Asparaguss",
+      "product_category": "vegetable",
+      "product_description": "Asparagus with ham on the wooden table",
+      "units_available": 25,
+      "height": 450,
+      "width": 299,
+      "price": 18.95,
+      "rating": 3
+    },
+    {
+      "id": 4,
+      "product_name": "Green smoothie",
+      "product_category": "dairy",
+      "product_description": "Glass of green smoothie with quail egg's yolk, served with cocktail tube, green apple and baby spinach leaves over tin surface.",
+      "units_available": 25,
+      "height": 600,
+      "width": 399,
+      "price": 17.68,
+      "rating": 4
+    },
+    {
+      "id": 5,
+      "product_name": "Raw legums",
+      "product_category": "vegetable",
+      "product_description": "Raw legums on the wooden table",
+      "units_available": 25,
+      "height": 450,
+      "width": 299,
+      "price": 17.11,
+      "rating": 2
+    },
+    {
+      "id": 6,
+      "product_name": "Baking cake",
+      "product_category": "dairy",
+      "product_description": "Baking cake in rural kitchen - dough  recipe ingredients (eggs, flour, sugar) on vintage wooden table from above.",
+      "units_available": 25,
+      "height": 450,
+      "width": 675,
+      "price": 11.14,
+      "rating": 4
+    },
+    {
+      "id": 7,
+      "product_name": "Pesto with basil",
+      "product_category": "vegetable",
+      "product_description": "Italian traditional pesto with basil, chesse and oil",
+      "units_available": 25,
+      "height": 450,
+      "width": 299,
+      "price": 18.19,
+      "rating": 2
+    },
+    {
+      "id": 8,
+      "product_name": "Hazelnut in black ceramic bowl",
+      "product_category": "vegetable",
+      "product_description": "Hazelnut in black ceramic bowl on old wooden background. forest wealth. rustic style. selective focus",
+      "units_available": 25,
+      "height": 450,
+      "width": 301,
+      "price": 27.35,
+      "rating": 0
+    },
+    {
+      "id": 9,
+      "product_name": "Fresh stawberry",
+      "product_category": "fruit",
+      "product_description": "Sweet fresh stawberry on the wooden table",
+      "units_available": 25,
+      "height": 600,
+      "width": 399,
+      "price": 28.59,
+      "rating": 4
+    },
+    {
+      "id": 10,
+      "product_name": "Lemon and salt",
+      "product_category": "fruit",
+      "product_description": "Rosemary, lemon and salt on the table",
+      "units_available": 25,
+      "height": 450,
+      "width": 299,
+      "price": 15.79,
+      "rating": 5
+    },
+    {
+      "id": 11,
+      "product_name": "Homemade bread",
+      "product_category": "bakery",
+      "product_description": "Homemade bread",
+      "units_available": 25,
+      "height": 450,
+      "width": 301,
+      "price": 17.48,
+      "rating": 3
+    },
+    {
+      "id": 12,
+      "product_name": "Legums",
+      "product_category": "vegetable",
+      "product_description": "Cooked legums on the wooden table",
+      "units_available": 25,
+      "height": 600,
+      "width": 399,
+      "price": 14.77,
+      "rating": 0
+    },
+    {
+      "id": 13,
+      "product_name": "Fresh tomato",
+      "product_category": "vegetable",
+      "product_description": "Fresh tomato juice with basil",
+      "units_available": 25,
+      "height": 600,
+      "width": 903,
+      "price": 16.3,
+      "rating": 2
+    }
   ]
 }

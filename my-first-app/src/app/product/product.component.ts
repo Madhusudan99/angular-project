@@ -15,7 +15,9 @@ export class ProductComponent implements OnInit {
   productList: any;
   productForm: any;
   formIsNew = false;
+  cleanedFormData:any;
   emptyForm = {
+    "id" : Math.floor(Math.random() * 100),
     "product_name": "",
     "product_category": "",
     "product_description": "",
@@ -33,9 +35,10 @@ export class ProductComponent implements OnInit {
     console.log(this.productList)
   }
   ngOnInit(): void {
-    this.dS.getCustomerData().subscribe((data) => this.addToProductList(data));
-
+    this.dS.getProductData().subscribe((data) => this.addToProductList(data));
+    console.log("pL", this.productList)
     this.productForm = this.fb.group({
+      id:[''],
       product_name: ['', Validators.required],
       product_category: ['', Validators.required],
       product_description: ['', Validators.required],
@@ -48,24 +51,35 @@ export class ProductComponent implements OnInit {
   }
 
   ProductFormData(){
-      console.log(this.productForm.value);
+      //console.log(this.productForm.value);
+      console.log(this.productForm.value.id);
+    this.cleanedFormData = {
+      "id": this.productForm.value.id,
+      "product_name": this.productForm.value.product_name,
+    "product_category": this.productForm.value.product_category,
+      "product_description": this.productForm.value.product_description,
+      "units_available": this.productForm.value.units_available,
+      "height": this.productForm.value.height,
+      "width": this.productForm.value.width,
+    "price": this.productForm.value.price,
+    "rating": this.productForm.value.rating
+    }
+
+    console.log(this.cleanedFormData);
+
+    this.dS.putProductData(this.cleanedFormData).subscribe((data) => console.log(data));
   }
   objectToFormData(objData: any) {
-    // this.myForm.FirstName = objData.first_name;
-    // this.myForm.LastName = objData.last_name;
-    // this.currentDate = new Date(Number(objData.date_of_birth.split("-")[0]), Number(objData.date_of_birth.split("-")[1]), Number(objData.date_of_birth.split("-")[2]));
-    // console.log(objData.date_of_birth)
     this.productForm.setValue({
-      productName: objData.product_name,
-      category: objData.product_category,
-      description: objData.product_description,
-      unitsAvailable: objData.units_available,
+      id: objData.id,
+      product_name: objData.product_name,
+      product_category: objData.product_category,
+      product_description: objData.product_description,
+      units_available: objData.units_available,
       height: objData.height,
       width: objData.width,
       price: objData.price,
       rating: objData.rating,
-      
-
     });
 }
 closeResult = '';
@@ -90,7 +104,7 @@ closeResult = '';
 
   }
   deleteProduct() {
-    this.dS.deleteCustomerData(this.productForm.value.Id).subscribe();
+    this.dS.deleteProductData(this.productForm.value.id).subscribe();
     this.modalService.dismissAll()
   }
 }

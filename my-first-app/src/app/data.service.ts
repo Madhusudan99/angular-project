@@ -12,7 +12,8 @@ export class DataService {
     "buyerData": "http://localhost:3000/buyer_details/",
     "customerData":"http://localhost:3000/customer_details/",
     "loginData": "http://localhost:3000/login_details/",
-    "sellerData": "http://localhost:3000/seller_name/"
+    "sellerData": "http://localhost:3000/seller_name/",
+    "productData": "http://localhost:3000/product/"
   }
 
 
@@ -34,5 +35,17 @@ export class DataService {
   }
   postCustomerData(data: any) {
     return this.http.post(this.urls.customerData, data);
+  }
+  getProductData() {
+    return this.http.get(this.urls.productData);
+  }
+  putProductData(data:any) {
+    return this.http.put(this.urls.productData+data.id, data);
+  }
+  deleteProductData(id:any) {
+    return this.http.delete(this.urls.productData+id);
+  }
+  postProductData(data: any) {
+    return this.http.post(this.urls.productData, data);
   }
 }
