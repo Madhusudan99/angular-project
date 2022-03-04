@@ -176,7 +176,7 @@
       "id": 1,
       "first_name": "Johny",
       "last_name": "Doe",
-      "date_of_birth": "14-2-1989",
+      "date_of_birth": "1996-02-21",
       "current_address": {
         "houseno": "21",
         "street": "2nd Street",
@@ -251,6 +251,26 @@
       },
       "email": "Julianne.OConner@kory.org",
       "phone_number": "14631234447"
+    },
+    {
+      "id": 17,
+      "first_name": "Madhusudan",
+      "last_name": "Jha",
+      "date_of_birth": "2013-06-12",
+      "current_address": {
+        "houseno": "286/450",
+        "street": "Sagwadi Kaliyabid",
+        "city": "Bhavnagar",
+        "zipcode": "364002"
+      },
+      "permenant_address": {
+        "houseno": "286/450",
+        "street": "Sagwadi Kaliyabid",
+        "city": "Bhavnagar",
+        "zipcode": "364002"
+      },
+      "email": "mjha@raytex.co.in",
+      "phone_number": "8209759721"
     }
   ],
   "login_details": [
