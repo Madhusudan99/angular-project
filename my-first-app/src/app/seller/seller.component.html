@@ -86,9 +86,9 @@
             </div>
         </div><br>
         <div class="modal-footer">
-            <button type="submit" class="btn btn-danger" *ngIf="!formIsNew">Delete</button>
+            <button type="button" class="btn btn-danger" *ngIf="!formIsNew" (click)="deleteSeller()">Delete</button>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" (click)="modal.dismiss('Cross click')">Submit</button>
 
         </div>
     </form>

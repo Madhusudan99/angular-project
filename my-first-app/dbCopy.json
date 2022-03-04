@@ -1,0 +1,539 @@
+{
+    "buyer_details": [
+        {
+            "id": 1,
+            "buyer_name": "Leanne Graham",
+            "buyer_email": "Sincere@april.biz",
+            "buyer_address": {
+                "street": "Kulas Light",
+                "suite": "Apt. 556",
+                "city": "Gwenborough",
+                "zipcode": "92998-3874"
+            },
+            "phone": "17707368031",
+            "website": "hildegard.org",
+            "company": {
+                "name": "Romaguera-Crona",
+                "catchPhrase": "Multi-layered client-server neural-net"
+            }
+        },
+        {
+            "id": 2,
+            "buyer_name": "Ervin Howell",
+            "buyer_email": "Shanna@melissa.tv",
+            "buyer_address": {
+                "street": "Victor Plains",
+                "suite": "Suite 879",
+                "city": "Wisokyburgh",
+                "zipcode": "90566-7771"
+            },
+            "phone": "0106926593",
+            "website": "anastasia.net",
+            "company": {
+                "name": "Deckow-Crist",
+                "catchPhrase": "Proactive didactic contingency"
+            }
+        },
+        {
+            "id": 3,
+            "buyer_name": "Clementine Bauch",
+            "buyer_email": "Nathan@yesenia.net",
+            "buyer_address": {
+                "street": "Douglas Extension",
+                "suite": "Suite 847",
+                "city": "McKenziehaven",
+                "zipcode": "59590-4157"
+            },
+            "phone": "14631234447",
+            "website": "ramiro.info",
+            "company": {
+                "name": "Romaguera-Jacobson",
+                "catchPhrase": "Face to face bifurcated interface"
+            }
+        },
+        {
+            "id": 4,
+            "buyer_name": "Patricia Lebsack",
+            "buyer_email": "Julianne.OConner@kory.org",
+            "buyer_address": {
+                "street": "Hoeger Mall",
+                "suite": "Apt. 692",
+                "city": "South Elvis",
+                "zipcode": "53919-4257"
+            },
+            "phone": "4931709623",
+            "website": "kale.biz",
+            "company": {
+                "name": "Robel-Corkery",
+                "catchPhrase": "Multi-tiered zero tolerance productivity"
+            }
+        },
+        {
+            "id": 5,
+            "buyer_name": "Chelsey Dietrich",
+            "buyer_email": "Lucio_Hettinger@annie.ca",
+            "buyer_address": {
+                "street": "Skiles Walks",
+                "suite": "Suite 351",
+                "city": "Roscoeview",
+                "zipcode": "33263"
+            },
+            "phone": "2549541289",
+            "website": "demarco.info",
+            "company": {
+                "name": "Keebler LLC",
+                "catchPhrase": "User-centric fault-tolerant solution"
+            }
+        },
+        {
+            "id": 6,
+            "buyer_name": "Mrs. Dennis Schulist",
+            "buyer_email": "Karley_Dach@jasper.info",
+            "buyer_address": {
+                "street": "Norberto Crossing",
+                "suite": "Apt. 950",
+                "city": "South Christy",
+                "zipcode": "23505-1337"
+            },
+            "phone": "14779358478",
+            "website": "ola.org",
+            "company": {
+                "name": "Considine-Lockman",
+                "catchPhrase": "Synchronised bottom-line interface"
+            }
+        },
+        {
+            "id": 7,
+            "buyer_name": "Kurtis Weissnat",
+            "buyer_email": "Telly.Hoeger@billy.biz",
+            "buyer_address": {
+                "street": "Rex Trail",
+                "suite": "Suite 280",
+                "city": "Howemouth",
+                "zipcode": "58804-1099"
+            },
+            "phone": "2100676132",
+            "website": "elvis.io",
+            "company": {
+                "name": "Johns Group",
+                "catchPhrase": "Configurable multimedia task-force"
+            }
+        },
+        {
+            "id": 8,
+            "buyer_name": "Nicholas Runolfsdottir V",
+            "buyer_email": "Sherwood@rosamond.me",
+            "buyer_address": {
+                "street": "Ellsworth Summit",
+                "suite": "Suite 729",
+                "city": "Aliyaview",
+                "zipcode": "45169"
+            },
+            "phone": "5864936943",
+            "website": "jacynthe.com",
+            "company": {
+                "name": "Abernathy Group",
+                "catchPhrase": "Implemented secondary concept"
+            }
+        },
+        {
+            "id": 9,
+            "buyer_name": "Glenna Reichert",
+            "buyer_email": "Chaim_McDermott@dana.io",
+            "buyer_address": {
+                "street": "Dayna Park",
+                "suite": "Suite 449",
+                "city": "Bartholomebury",
+                "zipcode": "76495-3109"
+            },
+            "phone": "7759766794",
+            "website": "conrad.com",
+            "company": {
+                "name": "Yost and Sons",
+                "catchPhrase": "Switchable contextually-based project"
+            }
+        },
+        {
+            "id": 10,
+            "buyer_name": "Clementina DuBuque",
+            "buyer_email": "Rey.Padberg@karina.biz",
+            "buyer_address": {
+                "street": "Kattie Turnpike",
+                "suite": "Suite 198",
+                "city": "Lebsackbury",
+                "zipcode": "31428-2261"
+            },
+            "phone": "0246483804",
+            "website": "ambrose.net",
+            "company": {
+                "name": "Hoeger LLC",
+                "catchPhrase": "Centralized empowering task-force"
+            }
+        }
+    ],
+    "customer_details": [
+        {
+            "id": 1,
+            "first_name": "John",
+            "last_name": "Smith",
+            "date_of_birth": "14-2-1989",
+            "current_address": {
+                "houseno": "21",
+                "street": "2nd Street",
+                "city": "New York",
+                "zipcode": "10021"
+            },
+            "permenant_address": {
+                "houseno": "35",
+                "street": "8nd Street",
+                "city": "New York",
+                "zipcode": "10021"
+            },
+            "email": "Sincere@april.biz",
+            "phone_number": "2125551234"
+        },
+        {
+            "id": 2,
+            "first_name": "James",
+            "last_name": "Butterburg",
+            "date_of_birth": "18-10-1975",
+            "current_address": {
+                "houseno": "145",
+                "street": "2nd Street",
+                "city": "New York",
+                "zipcode": "10025"
+            },
+            "permenant_address": {
+                "houseno": "6649",
+                "street": "N Blue Gum St",
+                "city": "LA",
+                "zipcode": "70116"
+            },
+            "email": "Shanna@melissa.tv",
+            "phone_number": "17707368031"
+        },
+        {
+            "id": 3,
+            "first_name": "Josephine",
+            "last_name": "Darakjy",
+            "date_of_birth": "30-5-1992",
+            "current_address": {
+                "houseno": "4",
+                "street": "B Blue Ridge Blvd",
+                "city": "Brighton",
+                "zipcode": "48116"
+            },
+            "permenant_address": {
+                "houseno": "35",
+                "street": "8nd Street",
+                "city": "New York",
+                "zipcode": "10021"
+            },
+            "email": "Nathan@yesenia.net",
+            "phone_number": "0106926593"
+        },
+        {
+            "id": 4,
+            "first_name": "Art",
+            "last_name": "Chemel",
+            "date_of_birth": "5-1-1999",
+            "current_address": {
+                "houseno": "8",
+                "street": "W Cerritos Ave #54",
+                "city": "Bridgeport",
+                "zipcode": "08014"
+            },
+            "permenant_address": {
+                "houseno": "35",
+                "street": "8nd Street",
+                "city": "New York",
+                "zipcode": "10021"
+            },
+            "email": "Julianne.OConner@kory.org",
+            "phone_number": "14631234447"
+        }
+    ],
+    "login_details": [
+        {
+            "id": 1,
+            "user_name": "admin123",
+            "password": "admin123"
+        }
+    ],
+    "seller_name": [
+        {
+            "id": 1,
+            "seller_name": "Leanne Graham",
+            "seller_email": "Sincere@april.biz",
+            "seller_address": {
+                "street": "Kulas Light",
+                "suite": "Apt. 556",
+                "city": "Gwenborough",
+                "zipcode": "92998-3874"
+            },
+            "phone": "17707368031",
+            "website": "hildegard.org"
+        },
+        {
+            "id": 2,
+            "seller_name": "Ervin Howell",
+            "seller_email": "Shanna@melissa.tv",
+            "seller_address": {
+                "street": "Victor Plains",
+                "suite": "Suite 879",
+                "city": "Wisokyburgh",
+                "zipcode": "90566-7771"
+            },
+            "phone": "0106926593",
+            "website": "anastasia.net"
+        },
+        {
+            "id": 3,
+            "seller_name": "Clementine Bauch",
+            "seller_email": "Nathan@yesenia.net",
+            "seller_address": {
+                "street": "Douglas Extension",
+                "suite": "Suite 847",
+                "city": "McKenziehaven",
+                "zipcode": "59590-4157"
+            },
+            "phone": "14631234447",
+            "website": "ramiro.info"
+        },
+        {
+            "id": 4,
+            "seller_name": "Patricia Lebsack",
+            "seller_email": "Julianne.OConner@kory.org",
+            "seller_address": {
+                "street": "Hoeger Mall",
+                "suite": "Apt. 692",
+                "city": "South Elvis",
+                "zipcode": "53919-4257"
+            },
+            "phone": "4931709623",
+            "website": "kale.biz"
+        },
+        {
+            "id": 5,
+            "seller_name": "Nicholas Runolfsdottir V",
+            "seller_email": "Sherwood@rosamond.me",
+            "seller_address": {
+                "street": "Ellsworth Summit",
+                "suite": "Suite 729",
+                "city": "Aliyaview",
+                "zipcode": "45169"
+            },
+            "phone": "2549541289",
+            "website": "demarco.info"
+        },
+        {
+            "id": 6,
+            "seller_name": "Mrs. Dennis Schulist",
+            "seller_email": "Karley_Dach@jasper.info",
+            "seller_address": {
+                "street": "Norberto Crossing",
+                "suite": "Apt. 950",
+                "city": "South Christy",
+                "zipcode": "23505-1337"
+            },
+            "phone": "14779358478",
+            "website": "ola.org"
+        },
+        {
+            "id": 7,
+            "seller_name": "Kurtis Weissnat",
+            "seller_email": "Telly.Hoeger@billy.biz",
+            "seller_address": {
+                "street": "Rex Trail",
+                "suite": "Suite 280",
+                "city": "Howemouth",
+                "zipcode": "58804-1099"
+            },
+            "phone": "2100676132",
+            "website": "elvis.io"
+        },
+        {
+            "id": 8,
+            "seller_name": "Chelsey Dietrich",
+            "seller_email": "Lucio_Hettinger@annie.ca",
+            "seller_address": {
+                "street": "Skiles Walks",
+                "suite": "Suite 351",
+                "city": "Roscoeview",
+                "zipcode": "33263"
+            },
+            "phone": "5864936943",
+            "website": "jacynthe.com"
+        },
+        {
+            "id": 9,
+            "seller_name": "Glenna Reichert",
+            "seller_email": "Chaim_McDermott@dana.io",
+            "seller_address": {
+                "street": "Kattie Turnpike",
+                "suite": "Suite 198",
+                "city": "Lebsackbury",
+                "zipcode": "31428-2261"
+            },
+            "phone": "7759766794",
+            "website": "conrad.com"
+        },
+        {
+            "id": 10,
+            "seller_name": "Clementina DuBuque",
+            "seller_email": "Rey.Padberg@karina.biz",
+            "seller_address": {
+                "street": "Dayna Park",
+                "suite": "Suite 449",
+                "city": "Bartholomebury",
+                "zipcode": "76495-3109"
+            },
+            "phone": "0246483804",
+            "website": "ambrose.net"
+        }
+    ],
+    "product":[
+        {
+        "product_id":1,
+        "product_name": "Brown eggs",
+        "product_category": "dairy",
+        "product_description": "Raw organic brown eggs in a basket",
+        "units_available":25,
+        "height": 600,
+        "width": 400,
+        "price": 28.1,
+        "rating": 4
+    },
+    {
+        "product_id":2,
+        "product_name": "Sweet fresh stawberry",
+        "product_category": "fruit",
+        "product_description": "Sweet fresh stawberry on the wooden table",
+        "units_available":25,
+        "height": 450,
+        "width": 299,
+        "price": 29.45,
+        "rating": 4
+    },
+    {
+        "product_id":3,
+        "product_name": "Asparagus",
+        "product_category": "vegetable",
+        "product_description": "Asparagus with ham on the wooden table",
+        "units_available":25,
+        "height": 450,
+        "width": 299,
+        "price": 18.95,
+        "rating": 3
+    },
+    {
+        "product_id":4,
+        "product_name": "Green smoothie",
+        "product_category": "dairy",
+        "product_description": "Glass of green smoothie with quail egg's yolk, served with cocktail tube, green apple and baby spinach leaves over tin surface.",
+        "units_available":25,
+        "height": 600,
+        "width": 399,
+        "price": 17.68,
+        "rating": 4
+    },
+    {
+        "product_id":5,
+        "product_name": "Raw legums",
+        "product_category": "vegetable",
+        "product_description": "Raw legums on the wooden table",
+        "units_available":25,
+        "height": 450,
+        "width": 299,
+        "price": 17.11,
+        "rating": 2
+    },
+    {
+        "product_id":6,
+        "product_name": "Baking cake",
+        "product_category": "dairy",
+        "product_description": "Baking cake in rural kitchen - dough  recipe ingredients (eggs, flour, sugar) on vintage wooden table from above.",
+        "units_available":25,
+        "height": 450,
+        "width": 675,
+        "price": 11.14,
+        "rating": 4
+    },
+    {
+        "product_id":7,
+        "product_name": "Pesto with basil",
+        "product_category": "vegetable",
+        "product_description": "Italian traditional pesto with basil, chesse and oil",
+        "units_available":25,
+        "height": 450,
+        "width": 299,
+        "price": 18.19,
+        "rating": 2
+    },
+    {
+        "product_id":8,
+        "product_name": "Hazelnut in black ceramic bowl",
+        "product_category": "vegetable",
+        "product_description": "Hazelnut in black ceramic bowl on old wooden background. forest wealth. rustic style. selective focus",
+        "units_available":25,
+        "height": 450,
+        "width": 301,
+        "price": 27.35,
+        "rating": 0
+    },
+    {
+        "product_id":9,
+        "product_name": "Fresh stawberry",
+        "product_category": "fruit",
+        "product_description": "Sweet fresh stawberry on the wooden table",
+        "units_available":25,
+        "height": 600,
+        "width": 399,
+        "price": 28.59,
+        "rating": 4
+    },
+    {
+        "product_id":10,
+        "product_name": "Lemon and salt",
+        "product_category": "fruit",
+        "product_description": "Rosemary, lemon and salt on the table",
+        "units_available":25,
+        "height": 450,
+        "width": 299,
+        "price": 15.79,
+        "rating": 5
+    },
+    {
+        "product_id":11,
+        "product_name": "Homemade bread",
+        "product_category": "bakery",
+        "product_description": "Homemade bread",
+        "units_available":25,
+        "height": 450,
+        "width": 301,
+        "price": 17.48,
+        "rating": 3
+    },
+    {
+        "product_id":12,
+        "product_name": "Legums",
+        "product_category": "vegetable",
+        "product_description": "Cooked legums on the wooden table",
+        "units_available":25,
+        "height": 600,
+        "width": 399,
+        "price": 14.77,
+        "rating": 0
+    },
+    {
+        "product_id":13,
+        "product_name": "Fresh tomato",
+        "product_category": "vegetable",
+        "product_description": "Fresh tomato juice with basil",
+        "units_available":25,
+        "height": 600,
+        "width": 903,
+        "price": 16.3,
+        "rating": 2
+    }]
+}

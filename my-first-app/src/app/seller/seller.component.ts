@@ -15,7 +15,9 @@ export class SellerComponent implements OnInit {
   SellerForm: any;
   SellerList: any;
   formIsNew = true;
+  cleanedFormData:any;
   emptyForm = {
+    "id": Math.floor(Math.random() * 100),
     "seller_name": "",
     "seller_email": "",
     "seller_address": {
@@ -37,6 +39,7 @@ export class SellerComponent implements OnInit {
     this.dS.getSellerData().subscribe((data) => this.addToSellerList(data));
 
     this.SellerForm = this.fb.group({
+      id: [''],
       seller_name: ['', Validators.required],
       street: ['', Validators.required],
       suite: ['', Validators.required],
@@ -52,6 +55,36 @@ export class SellerComponent implements OnInit {
 
   SellerFormData() {
     console.log(this.SellerForm.value);
+    console.log(this.SellerForm.value);
+    this.cleanedFormData = {
+      "id": this.SellerForm.value.id,
+      "seller_name": this.SellerForm.value.seller_name,
+      "seller_email": this.SellerForm.value.seller_email,
+    "seller_address": {
+      "street": this.SellerForm.value.street,
+      "suite": this.SellerForm.value.suite,
+      "city": this.SellerForm.value.city,
+      "zipcode": this.SellerForm.value.zipcode
+    },
+    "phone": this.SellerForm.value.phone,
+    "website": this.SellerForm.value.website
+    }
+
+    // "id": 1,
+    // "seller_name": "Leanne Graham",
+    // "seller_email": "Sincere@april.biz",
+    // "seller_address": {
+    //   "street": "Kulas Light",
+    //   "suite": "Apt. 556",
+    //   "city": "Gwenborough",
+    //   "zipcode": "92998-3874"
+    // },
+    // "phone": "17707368031",
+    // "website": "hildegard.org"
+
+    console.log(this.cleanedFormData);
+
+    this.dS.putSellerData(this.cleanedFormData).subscribe((data) => console.log(data));
   }
   // currentDate:any;
   objectToFormData(objData: any) {
@@ -60,6 +93,7 @@ export class SellerComponent implements OnInit {
     // this.currentDate = new Date(Number(objData.date_of_birth.split("-")[0]), Number(objData.date_of_birth.split("-")[1]), Number(objData.date_of_birth.split("-")[2]));
     // console.log(objData.date_of_birth)
     this.SellerForm.setValue({
+      id: objData.id,
       seller_name: objData.seller_name,
       seller_email: objData.seller_email,
       street: objData.seller_address.street,
@@ -94,6 +128,12 @@ export class SellerComponent implements OnInit {
       this.objectToFormData(this.emptyForm);
     }
 
+  }
+
+  deleteSeller() {
+    console.log(this.SellerForm.value.id);
+    this.dS.deleteSellerData(this.SellerForm.value.id).subscribe();
+    this.modalService.dismissAll()
   }
 
 }
