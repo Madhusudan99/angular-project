@@ -19,6 +19,7 @@ export class CustomerComponent implements OnInit {
   formIsNew = false;
   cleanedFormData:any;
   emptyForm = {
+    "id": Math.floor(Math.random() * 100),
     "first_name": "",
     "last_name": "",
     "date_of_birth": "",
