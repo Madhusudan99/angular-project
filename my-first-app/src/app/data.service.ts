@@ -9,10 +9,10 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   urls = {
-    "buyerData": "http://192.168.43.78:3000/buyer_details",
-    "customerData": "http://192.168.43.78:3000/customer_details",
-    "loginData": "http://192.168.43.78:3000/login_details",
-    "sellerData": "http://192.168.43.78:3000/seller_name"
+    "buyerData": "http://192.168.2.85:3000/buyer_details/",
+    "customerData": "http://192.168.2.85:3000/customer_details/",
+    "loginData": "http://192.168.2.85:3000/login_details/",
+    "sellerData": "http://192.168.2.85:3000/seller_name/"
   }
 
 
@@ -25,5 +25,14 @@ export class DataService {
   }
   getSellerData() {
     return this.http.get(this.urls.sellerData);
+  }
+  putCustomerData(data:any) {
+    return this.http.put(this.urls.customerData+data.id, data);
+  }
+  deleteCustomerData(id:any) {
+    return this.http.delete(this.urls.customerData+id);
+  }
+  postCustomerData(data: any) {
+    return this.http.post(this.urls.customerData, data);
   }
 }
