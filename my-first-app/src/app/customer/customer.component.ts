@@ -3,6 +3,7 @@ import { Data } from '@angular/router';
 import { DataService } from '../data.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer',
@@ -11,12 +12,14 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class CustomerComponent implements OnInit {
 
-  constructor(private dS: DataService, private modalService: NgbModal, private fb: FormBuilder) { }
+  constructor(private dS: DataService, private modalService: NgbModal, private fb: FormBuilder, private router: Router) { }
 
   customerList: any;
   myForm: any;
   formIsNew = false;
+  cleanedFormData:any;
   emptyForm = {
+    "id": Math.floor(Math.random() * 100),
     "first_name": "",
     "last_name": "",
     "date_of_birth": "",
@@ -46,6 +49,7 @@ export class CustomerComponent implements OnInit {
     this.dS.getCustomerData().subscribe((data) => this.addToCustomerList(data));
 
     this.myForm = this.fb.group({
+      Id:[''],
       FirstName: ['', Validators.required],
       LastName: ['', Validators.required],
       Birthdate: ['', Validators.required],
@@ -65,10 +69,35 @@ export class CustomerComponent implements OnInit {
     });
   }
 
-  CustomerFormData() {
+  updateCustomerFormData() {
     console.log(this.myForm.value);
+    this.cleanedFormData = {
+      "id": this.myForm.value.Id,
+      "first_name": this.myForm.value.FirstName,
+    "last_name": this.myForm.value.LastName,
+    "date_of_birth": this.myForm.value.Birthdate,
+    "current_address": {
+      "houseno": this.myForm.value.CurrenthouseNo,
+      "street": this.myForm.value.CurrentAddress,
+      "city": this.myForm.value.CurrentCity,
+      "zipcode": this.myForm.value.CurrentZip
+    },
+    "permenant_address": {
+      "houseno": this.myForm.value.ParmanenthouseNo,
+      "street": this.myForm.value.ParmanentAddress,
+      "city": this.myForm.value.ParmanentCity,
+      "zipcode": this.myForm.value.ParmanentZip
+    },
+    "email": this.myForm.value.Email,
+    "phone_number": this.myForm.value.PhoneNumber
+    }
+
+    console.log(this.cleanedFormData);
+
+    this.dS.putCustomerData(this.cleanedFormData).subscribe((data) => console.log(data));
   }
 
+ 
   // currentDate:any;
   objectToFormData(objData: any) {
     // this.myForm.FirstName = objData.first_name;
@@ -76,6 +105,7 @@ export class CustomerComponent implements OnInit {
     // this.currentDate = new Date(Number(objData.date_of_birth.split("-")[0]), Number(objData.date_of_birth.split("-")[1]), Number(objData.date_of_birth.split("-")[2]));
     // console.log(objData.date_of_birth)
     this.myForm.setValue({
+      Id: objData.id,
       FirstName: objData.first_name,
       LastName: objData.last_name,
       Birthdate: objData.date_of_birth,
@@ -118,5 +148,10 @@ export class CustomerComponent implements OnInit {
       this.objectToFormData(this.emptyForm);
     }
 
+  }
+
+  deleteCustomer() {
+    this.dS.deleteCustomerData(this.myForm.value.Id).subscribe();
+    this.modalService.dismissAll()
   }
 }

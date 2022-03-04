@@ -15,8 +15,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let customer of customerList">
-                <th scope="row">{{customer.id}}</th>
+            <tr *ngFor="let customer of customerList; let i = index">
+                <th scope="row">{{i+1}}</th>
                 <td>{{customer.first_name}}</td>
                 <td>{{customer.last_name}}</td>
                 <td>{{customer.date_of_birth}}</td>
@@ -38,14 +38,14 @@
 </div>
 
 
-<ng-template #content let-modal>
+<ng-template #content let-modal>    
     <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title" *ngIf="!formIsNew">Update Data</h4>
         <h4 class="modal-title" id="modal-basic-title" *ngIf="formIsNew">Insert Data</h4>
         <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div class="modal-body">
-        <form [formGroup]="myForm" (ngSubmit)="CustomerFormData()">
+        <form [formGroup]="myForm" (ngSubmit)="updateCustomerFormData()">
             <div class="form-row row">
                 <div class="form-group col-md-6">
                     <label>First Name</label>
@@ -115,9 +115,9 @@
                 </div>
             </div><br>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-danger" *ngIf="!formIsNew">Delete</button>
+                <button type="button" class="btn btn-danger" *ngIf="!formIsNew" (click)="deleteCustomer()">Delete</button>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" (click)="modal.dismiss('Cross click')">Submit</button>
 
             </div>
         </form>

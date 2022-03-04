@@ -26,4 +26,13 @@ export class DataService {
   getSellerData() {
     return this.http.get(this.urls.sellerData);
   }
+  putCustomerData(data:any) {
+    return this.http.put(this.urls.customerData+data.id, data);
+  }
+  deleteCustomerData(id:any) {
+    return this.http.delete(this.urls.customerData+id);
+  }
+  postCustomerData(data: any) {
+    return this.http.post(this.urls.customerData, data);
+  }
 }
