@@ -10,9 +10,9 @@ export class DataService {
 
   urls = {
     "buyerData": "http://192.168.43.78:3000/buyer_details",
-    "customerData": "http://192.168.43.78:3000/customer_details",
+    "customerData": "http://192.168.2.169:3000/customer_details",
     "loginData": "http://192.168.43.78:3000/login_details",
-    "sellerData": "http://192.168.43.78:3000/seller_name"
+    "sellerData": "http://192.168.2.169:3000/seller_name"
   }
 
 
