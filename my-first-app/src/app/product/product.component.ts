@@ -89,4 +89,8 @@ closeResult = '';
     }
 
   }
+  deleteProduct() {
+    this.dS.deleteCustomerData(this.productForm.value.Id).subscribe();
+    this.modalService.dismissAll()
+  }
 }

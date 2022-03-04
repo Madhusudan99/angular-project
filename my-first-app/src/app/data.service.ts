@@ -9,10 +9,10 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   urls = {
-    "buyerData": "http://localhost:3000/buyer_details",
-    "customerData":"http://localhost:3000/customer_details",
-    "loginData": "http://localhost:3000/login_details",
-    "sellerData": "http://localhost:3000/seller_name"
+    "buyerData": "http://localhost:3000/buyer_details/",
+    "customerData":"http://localhost:3000/customer_details/",
+    "loginData": "http://localhost:3000/login_details/",
+    "sellerData": "http://localhost:3000/seller_name/"
   }
 
 

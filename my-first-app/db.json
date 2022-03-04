@@ -174,7 +174,7 @@
   "customer_details": [
     {
       "id": 1,
-      "first_name": "John",
+      "first_name": "Johny",
       "last_name": "Doe",
       "date_of_birth": "14-2-1989",
       "current_address": {
