@@ -98,6 +98,37 @@ export class CustomerComponent implements OnInit {
   }
 
  
+  postCustomerFormData() {
+    console.log(this.myForm.value);
+    this.cleanedFormData = {
+      "id": this.myForm.value.Id,
+      "first_name": this.myForm.value.FirstName,
+    "last_name": this.myForm.value.LastName,
+    "date_of_birth": this.myForm.value.Birthdate,
+    "current_address": {
+      "houseno": this.myForm.value.CurrenthouseNo,
+      "street": this.myForm.value.CurrentAddress,
+      "city": this.myForm.value.CurrentCity,
+      "zipcode": this.myForm.value.CurrentZip
+    },
+    "permenant_address": {
+      "houseno": this.myForm.value.ParmanenthouseNo,
+      "street": this.myForm.value.ParmanentAddress,
+      "city": this.myForm.value.ParmanentCity,
+      "zipcode": this.myForm.value.ParmanentZip
+    },
+    "email": this.myForm.value.Email,
+    "phone_number": this.myForm.value.PhoneNumber
+    }
+
+    console.log(this.cleanedFormData);
+
+    this.dS.postCustomerData(this.cleanedFormData).subscribe((data) => console.log(data));
+  
+
+  }
+
+
   // currentDate:any;
   objectToFormData(objData: any) {
     // this.myForm.FirstName = objData.first_name;

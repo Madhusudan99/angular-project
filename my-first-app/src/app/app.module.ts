@@ -22,7 +22,11 @@ import { SellerFormComponent } from './seller-form/seller-form.component';
     CustomerComponent,
     PageNotFoundComponent,
     FormComponent,
+<<<<<<< HEAD
     SellerFormComponent
+=======
+    LoginComponent
+>>>>>>> 617343de4c77eef5e83254c1400e7cbc51c100ed
   ],
   imports: [
     BrowserModule,
