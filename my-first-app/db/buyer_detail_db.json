@@ -1,0 +1,174 @@
+{
+    "buyer_details":[
+        {
+            "id": 1,
+            "buyer_name": "Leanne Graham",
+            "buyer_email": "Sincere@april.biz",
+            "buyer_address": {
+                "street": "Kulas Light",
+                "suite": "Apt. 556",
+                "city": "Gwenborough",
+                "zipcode": "92998-3874"
+            },
+            "phone": "17707368031",
+            "website": "hildegard.org",
+            "company": {
+                "name": "Romaguera-Crona",
+                "catchPhrase": "Multi-layered client-server neural-net"
+            }
+        },
+        {
+            "id": 2,
+            "buyer_name": "Ervin Howell",
+            "buyer_email": "Shanna@melissa.tv",
+            "buyer_address": {
+                "street": "Victor Plains",
+                "suite": "Suite 879",
+                "city": "Wisokyburgh",
+                "zipcode": "90566-7771"
+            },
+            "phone": "0106926593",
+            "website": "anastasia.net",
+            "company": {
+                "name": "Deckow-Crist",
+                "catchPhrase": "Proactive didactic contingency"
+            }
+        },
+        {
+            "id": 3,
+            "buyer_name": "Clementine Bauch",
+            "buyer_email": "Nathan@yesenia.net",
+            "buyer_address": {
+                "street": "Douglas Extension",
+                "suite": "Suite 847",
+                "city": "McKenziehaven",
+                "zipcode": "59590-4157"
+            },
+            "phone": "14631234447",
+            "website": "ramiro.info",
+            "company": {
+                "name": "Romaguera-Jacobson",
+                "catchPhrase": "Face to face bifurcated interface"
+            }
+        },
+        {
+            "id": 4,
+            "buyer_name": "Patricia Lebsack",
+            "buyer_email": "Julianne.OConner@kory.org",
+            "buyer_address": {
+                "street": "Hoeger Mall",
+                "suite": "Apt. 692",
+                "city": "South Elvis",
+                "zipcode": "53919-4257"
+            },
+            "phone": "4931709623",
+            "website": "kale.biz",
+            "company": {
+                "name": "Robel-Corkery",
+                "catchPhrase": "Multi-tiered zero tolerance productivity"
+            }
+        },
+        {
+            "id": 5,
+            "buyer_name": "Chelsey Dietrich",
+            "buyer_email": "Lucio_Hettinger@annie.ca",
+            "buyer_address": {
+                "street": "Skiles Walks",
+                "suite": "Suite 351",
+                "city": "Roscoeview",
+                "zipcode": "33263"
+            },
+            "phone": "2549541289",
+            "website": "demarco.info",
+            "company": {
+                "name": "Keebler LLC",
+                "catchPhrase": "User-centric fault-tolerant solution"
+            }
+        },
+        {
+            "id": 6,
+            "buyer_name": "Mrs. Dennis Schulist",
+            "buyer_email": "Karley_Dach@jasper.info",
+            "buyer_address": {
+                "street": "Norberto Crossing",
+                "suite": "Apt. 950",
+                "city": "South Christy",
+                "zipcode": "23505-1337"
+            },
+            "phone": "14779358478",
+            "website": "ola.org",
+            "company": {
+                "name": "Considine-Lockman",
+                "catchPhrase": "Synchronised bottom-line interface"
+            }
+        },
+        {
+            "id": 7,
+            "buyer_name": "Kurtis Weissnat",
+            "buyer_email": "Telly.Hoeger@billy.biz",
+            "buyer_address": {
+                "street": "Rex Trail",
+                "suite": "Suite 280",
+                "city": "Howemouth",
+                "zipcode": "58804-1099"
+            },
+            "phone": "2100676132",
+            "website": "elvis.io",
+            "company": {
+                "name": "Johns Group",
+                "catchPhrase": "Configurable multimedia task-force"
+            }
+        },
+        {
+            "id": 8,
+            "buyer_name": "Nicholas Runolfsdottir V",
+            "buyer_email": "Sherwood@rosamond.me",
+            "buyer_address": {
+                "street": "Ellsworth Summit",
+                "suite": "Suite 729",
+                "city": "Aliyaview",
+                "zipcode": "45169"
+            },
+            "phone": "5864936943",
+            "website": "jacynthe.com",
+            "company": {
+                "name": "Abernathy Group",
+                "catchPhrase": "Implemented secondary concept"
+            }
+        },
+        {
+            "id": 9,
+            "buyer_name": "Glenna Reichert",
+            "buyer_email": "Chaim_McDermott@dana.io",
+            "buyer_address": {
+                "street": "Dayna Park",
+                "suite": "Suite 449",
+                "city": "Bartholomebury",
+                "zipcode": "76495-3109"
+            },
+            "phone": "7759766794",
+            "website": "conrad.com",
+            "company": {
+                "name": "Yost and Sons",
+                "catchPhrase": "Switchable contextually-based project"
+            }
+        },
+        {
+            "id": 10,
+            "buyer_name": "Clementina DuBuque",
+            "email": "Rey.Padberg@karina.biz",
+            "buyer_address": {
+                "street": "Kattie Turnpike",
+                "suite": "Suite 198",
+                "city": "Lebsackbury",
+                "zipcode": "31428-2261"
+            },
+            "phone": "0246483804",
+            "website": "ambrose.net",
+            "company": {
+                "name": "Hoeger LLC",
+                "catchPhrase": "Centralized empowering task-force"
+            }
+        }
+    ]
+}
