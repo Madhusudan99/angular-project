@@ -1,0 +1,134 @@
+{
+    "buyer_details":[
+        {
+            "id": 1,
+            "seller_name": "Leanne Graham",
+            "seller_email": "Sincere@april.biz",
+            "seller_address": {
+                "street": "Kulas Light",
+                "suite": "Apt. 556",
+                "city": "Gwenborough",
+                "zipcode": "92998-3874"
+            },
+            "phone": "17707368031",
+            "website": "hildegard.org"
+        },
+        {
+            "id": 2,
+            "seller_name": "Ervin Howell",
+            "seller_email": "Shanna@melissa.tv",
+            "seller_address": {
+                "street": "Victor Plains",
+                "suite": "Suite 879",
+                "city": "Wisokyburgh",
+                "zipcode": "90566-7771"
+            },
+            "phone": "0106926593",
+            "website": "anastasia.net"
+        },
+        {
+            "id": 3,
+            "seller_name": "Clementine Bauch",
+            "seller_email": "Nathan@yesenia.net",
+            "seller_address": {
+                "street": "Douglas Extension",
+                "suite": "Suite 847",
+                "city": "McKenziehaven",
+                "zipcode": "59590-4157"
+            },
+            "phone": "14631234447",
+            "website": "ramiro.info"
+        },
+        {
+            "id": 4,
+            "seller_name": "Patricia Lebsack",
+            "seller_email": "Julianne.OConner@kory.org",
+            "seller_address": {
+                "street": "Hoeger Mall",
+                "suite": "Apt. 692",
+                "city": "South Elvis",
+                "zipcode": "53919-4257"
+            },
+            "phone": "4931709623",
+            "website": "kale.biz"
+        },
+        {
+            "id": 5,
+            "seller_name": "Nicholas Runolfsdottir V",
+            "seller_email": "Sherwood@rosamond.me",
+            "seller_address": {
+                "street": "Ellsworth Summit",
+                "suite": "Suite 729",
+                "city": "Aliyaview",
+                "zipcode": "45169"
+            },
+            "phone": "2549541289",
+            "website": "demarco.info"
+        },
+        {
+            "id": 6,
+            "seller_name": "Mrs. Dennis Schulist",
+            "seller_email": "Karley_Dach@jasper.info",
+            "seller_address": {
+                "street": "Norberto Crossing",
+                "suite": "Apt. 950",
+                "city": "South Christy",
+                "zipcode": "23505-1337"
+            },
+            "phone": "14779358478",
+            "website": "ola.org"
+        },
+        {
+            "id": 7,
+            "seller_name": "Kurtis Weissnat",
+            "seller_email": "Telly.Hoeger@billy.biz",
+            "seller_address": {
+                "street": "Rex Trail",
+                "suite": "Suite 280",
+                "city": "Howemouth",
+                "zipcode": "58804-1099"
+            },
+            "phone": "2100676132",
+            "website": "elvis.io"
+        },
+        {
+            "id": 8,
+            "seller_name": "Chelsey Dietrich",
+            "seller_email": "Lucio_Hettinger@annie.ca",
+            "seller_address": {
+                "street": "Skiles Walks",
+                "suite": "Suite 351",
+                "city": "Roscoeview",
+                "zipcode": "33263"
+            },
+            "phone": "5864936943",
+            "website": "jacynthe.com"
+        },
+        {
+            "id": 9,
+            "seller_name": "Glenna Reichert",
+            "seller_email": "Chaim_McDermott@dana.io",
+            "seller_address": {
+                "street": "Kattie Turnpike",
+                "suite": "Suite 198",
+                "city": "Lebsackbury",
+                "zipcode": "31428-2261"
+            },
+            "phone": "7759766794",
+            "website": "conrad.com"
+        },
+        {
+            "id": 10,
+            "seller_name": "Clementina DuBuque",
+            "seller": "Rey.Padberg@karina.biz",
+            "seller_address": {
+                "street": "Dayna Park",
+                "suite": "Suite 449",
+                "city": "Bartholomebury",
+                "zipcode": "76495-3109"
+            },
+            "phone": "0246483804",
+            "website": "ambrose.net"
+        }
+    ]
+}

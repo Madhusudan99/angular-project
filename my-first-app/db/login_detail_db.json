@@ -1,0 +1,9 @@
+{
+    "login_details": [
+      {
+        "id": 1,
+        "user_name": "admin123",
+        "password": "admin123"
+      }
+    ]
+}
