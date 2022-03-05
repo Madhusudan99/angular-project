@@ -12,6 +12,8 @@ import { DataService } from '../data.service';
 export class ProductComponent implements OnInit {
 
   constructor(private dS: DataService, private modalService: NgbModal, private fb: FormBuilder) { }
+
+  index:any;
   productList: any;
   productForm: any;
   formIsNew = false;
@@ -49,6 +51,10 @@ export class ProductComponent implements OnInit {
     });
   }
 
+
+  showUpdatedResult(data: any) {
+    this.productList[this.index] = data;
+  }
   updateProductFormData(){
       console.log(this.productForm.value);
       // console.log(this.productForm.value.id);
@@ -66,9 +72,14 @@ export class ProductComponent implements OnInit {
 
     console.log(this.cleanedFormData);
 
-    this.dS.putProductData(this.cleanedFormData).subscribe((data) => console.log(data));
+    this.dS.putProductData(this.cleanedFormData).subscribe((data) => this.showUpdatedResult(data));
   }
 
+
+  showCreatedResult(data: any) {
+    this.productList.push(data);
+  }
+ 
   postProductFormData() {
 
     console.log(this.productForm.value);
@@ -80,14 +91,14 @@ export class ProductComponent implements OnInit {
       "product_description": this.productForm.value.product_description,
       "units_available": this.productForm.value.units_available,
       "height": this.productForm.value.height,
-      "width": this.productForm.value.width,
+      "width": this.productForm.value.width,      
     "price": this.productForm.value.price,
     "rating": this.productForm.value.rating
     }
 
     console.log(this.cleanedFormData);
 
-    this.dS.postProductData(this.cleanedFormData).subscribe((data) => console.log(data));
+    this.dS.postProductData(this.cleanedFormData).subscribe((data) => this.showCreatedResult(data));
 
 
   }
@@ -105,7 +116,9 @@ export class ProductComponent implements OnInit {
     });
 }
 closeResult = '';
-  open(content: any, data: any) {
+  open(content: any, data: any, i: any) {
+
+    this.index = i;
 
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', size: 'xl', backdrop: 'static' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
@@ -127,6 +140,8 @@ closeResult = '';
   }
   deleteProduct() {
     this.dS.deleteProductData(this.productForm.value.id).subscribe();
-    this.modalService.dismissAll()
+    this.modalService.dismissAll();
+    this.productList.splice(this.index, 1);
+
   }
 }

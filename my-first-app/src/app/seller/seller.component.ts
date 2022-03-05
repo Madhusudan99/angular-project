@@ -12,6 +12,7 @@ export class SellerComponent implements OnInit {
 
   constructor(private dS: DataService, private modalService: NgbModal, private fb: FormBuilder) { }
 
+  index:any;
   SellerForm: any;
   SellerList: any;
   formIsNew = true;
@@ -52,7 +53,9 @@ export class SellerComponent implements OnInit {
     });
   }
 
-
+  showUpdatedResult(data: any) {
+    this.SellerList[this.index] = data;
+  }
   SellerFormData() {
     console.log(this.SellerForm.value);
     console.log(this.SellerForm.value);
@@ -84,10 +87,12 @@ export class SellerComponent implements OnInit {
 
     console.log(this.cleanedFormData);
 
-    this.dS.putSellerData(this.cleanedFormData).subscribe((data) => console.log(data));
+    this.dS.putSellerData(this.cleanedFormData).subscribe((data) => this.showUpdatedResult(data));
   }
 
-
+  showCreatedResult(data: any) {
+    this.SellerList.push(data);
+  }
   postSellerFormData(){
     console.log(this.SellerForm.value);
     this.cleanedFormData = {
@@ -106,7 +111,7 @@ export class SellerComponent implements OnInit {
 
     console.log(this.cleanedFormData);
 
-    this.dS.postSellerData(this.cleanedFormData).subscribe((data) => console.log(data));
+    this.dS.postSellerData(this.cleanedFormData).subscribe((data) => this.showCreatedResult(data));
 
   }
 
@@ -133,7 +138,9 @@ export class SellerComponent implements OnInit {
   }
 
   closeResult = '';
-  open(content: any, data: any) {
+  open(content: any, data: any, i: any) {
+
+    this.index = i;
 
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', size: 'xl', backdrop: 'static' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
@@ -157,7 +164,9 @@ export class SellerComponent implements OnInit {
   deleteSeller() {
     console.log(this.SellerForm.value.id);
     this.dS.deleteSellerData(this.SellerForm.value.id).subscribe();
-    this.modalService.dismissAll()
+    this.modalService.dismissAll();
+    this.SellerList.splice(this.index, 1);
+
   }
 
 }

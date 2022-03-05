@@ -27,7 +27,7 @@
                 <td>{{product.price}}</td>
                 <td>{{product.rating}}</td>
                 <td>
-                    <button class="btn btn-primary" type="button" (click)="open(content, product)">Load</button>
+                    <button class="btn btn-primary" type="button" (click)="open(content, product, i)">Load</button>
                 </td>
             </tr>
         </tbody>
@@ -36,7 +36,7 @@
 </div>
 
 <div class="container mt-3">
-    <button class="btn btn-success" style="width: 100%;" type="button" (click)="open(content, false)">Insert</button>
+    <button class="btn btn-success" style="width: 100%;" type="button" (click)="open(content, false, -1)">Insert</button>
 </div>
 
 

@@ -2,7 +2,7 @@
   "buyer_details": [
     {
       "id": 1,
-      "buyer_name": "Leanne Graham",
+      "buyer_name": "Leanne Jackson",
       "buyer_email": "Sincere@april.biz",
       "buyer_address": {
         "street": "Kulas Light",
@@ -174,7 +174,7 @@
   "customer_details": [
     {
       "id": 1,
-      "first_name": "Johny",
+      "first_name": "John",
       "last_name": "Doe",
       "date_of_birth": "1996-02-21",
       "current_address": {
@@ -253,24 +253,24 @@
       "phone_number": "14631234447"
     },
     {
-      "id": 17,
+      "id": 137,
       "first_name": "Madhusudan",
       "last_name": "Jha",
-      "date_of_birth": "2013-06-12",
+      "date_of_birth": "1999-07-14",
       "current_address": {
-        "houseno": "286/450",
-        "street": "Sagwadi Kaliyabid",
-        "city": "Bhavnagar",
-        "zipcode": "364002"
+        "houseno": "23 B",
+        "street": "Blue Street",
+        "city": "London",
+        "zipcode": "2333-211"
       },
       "permenant_address": {
-        "houseno": "286/450",
-        "street": "Sagwadi Kaliyabid",
-        "city": "Bhavnagar",
-        "zipcode": "364002"
+        "houseno": "23 B",
+        "street": "Blue Street",
+        "city": "London",
+        "zipcode": "2333-211"
       },
       "email": "mjha@raytex.co.in",
-      "phone_number": "8209759721"
+      "phone_number": "8567235498"
     }
   ],
   "login_details": [
@@ -283,7 +283,7 @@
   "seller_details": [
     {
       "id": 3,
-      "seller_name": "Clementine Bauch",
+      "seller_name": "Clementine Jackson  Clark",
       "seller_email": "Nathan@yesenia.net",
       "seller_address": {
         "street": "Douglas Extension",
@@ -337,14 +337,14 @@
   "product": [
     {
       "id": 1,
-      "product_name": "Brown eggs",
+      "product_name": "White eggs",
       "product_category": "dairy",
       "product_description": "Raw organic brown eggs in a basket",
       "units_available": 25,
       "height": 600,
       "width": 400,
       "price": 28.1,
-      "rating": 4
+      "rating": "5"
     },
     {
       "id": 2,

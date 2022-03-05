@@ -13,6 +13,7 @@ export class CustomerComponent implements OnInit {
 
   constructor(private dS: DataService, private modalService: NgbModal, private fb: FormBuilder, private router: Router) { }
 
+  index:any;
   customerList: any;
   myForm: any;
   formIsNew = false;
@@ -68,6 +69,9 @@ export class CustomerComponent implements OnInit {
     });
   }
 
+  showUpdatedResult(data: any) {
+    this.customerList[this.index] = data;
+  }
   updateCustomerFormData() {
     console.log(this.myForm.value);
     this.cleanedFormData = {
@@ -93,9 +97,12 @@ export class CustomerComponent implements OnInit {
 
     console.log(this.cleanedFormData);
 
-    this.dS.putCustomerData(this.cleanedFormData).subscribe((data) => console.log(data));
+    this.dS.putCustomerData(this.cleanedFormData).subscribe((data) => this.showUpdatedResult(data));
   }
 
+  showCreatedResult(data: any) {
+    this.customerList.push(data);
+  }
  
   postCustomerFormData() {
     console.log(this.myForm.value);
@@ -122,7 +129,7 @@ export class CustomerComponent implements OnInit {
 
     console.log(this.cleanedFormData);
 
-    this.dS.postCustomerData(this.cleanedFormData).subscribe((data) => console.log(data));
+    this.dS.postCustomerData(this.cleanedFormData).subscribe((data) => this.showCreatedResult(data));
   
 
   }
@@ -159,7 +166,9 @@ export class CustomerComponent implements OnInit {
   }
 
   closeResult = '';
-  open(content: any, data: any) {
+  open(content: any, data: any, i: any) {
+
+    this.index = i;
 
     this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', size: 'xl', backdrop: 'static' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
@@ -183,5 +192,6 @@ export class CustomerComponent implements OnInit {
   deleteCustomer() {
     this.dS.deleteCustomerData(this.myForm.value.Id).subscribe();
     this.modalService.dismissAll();
+    this.customerList.splice(this.index, 1);
   }
 }

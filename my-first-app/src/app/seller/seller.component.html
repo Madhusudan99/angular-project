@@ -23,7 +23,7 @@
                 <td>{{seller.phone}}</td>
                 <td>{{seller.website}}</td>
                 <td>
-                    <button class="btn btn-primary" type="button" (click)="open(content, seller)">Load</button>
+                    <button class="btn btn-primary" type="button" (click)="open(content, seller, i)">Load</button>
                 </td>
             </tr>
         </tbody>
@@ -34,7 +34,7 @@
 
 
 <div class="container mt-3">
-    <button class="btn btn-success" style="width: 100%;" type="button" (click)="open(content, false)">Insert</button>
+    <button class="btn btn-success" style="width: 100%;" type="button" (click)="open(content, false, -1)">Insert</button>
 </div>
 
 
