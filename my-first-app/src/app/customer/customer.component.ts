@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Data } from '@angular/router';
 import { DataService } from '../data.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
@@ -19,7 +18,7 @@ export class CustomerComponent implements OnInit {
   formIsNew = false;
   cleanedFormData:any;
   emptyForm = {
-    "id": Math.floor(Math.random() * 100),
+    "id": Math.floor(Math.random() * 10000),
     "first_name": "",
     "last_name": "",
     "date_of_birth": "",

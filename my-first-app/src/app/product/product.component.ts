@@ -17,16 +17,15 @@ export class ProductComponent implements OnInit {
   formIsNew = false;
   cleanedFormData:any;
   emptyForm = {
-    "id" : Math.floor(Math.random() * 100),
+    "id" : Math.floor(Math.random() * 10000),
     "product_name": "",
     "product_category": "",
     "product_description": "",
-    "units_available": {
+    "units_available": "",
       "height": "",
       "width": "",
       "price": "",
       "rating": ""
-    },
   }
 
 
@@ -50,9 +49,9 @@ export class ProductComponent implements OnInit {
     });
   }
 
-  ProductFormData(){
-      //console.log(this.productForm.value);
-      console.log(this.productForm.value.id);
+  updateProductFormData(){
+      console.log(this.productForm.value);
+      // console.log(this.productForm.value.id);
     this.cleanedFormData = {
       "id": this.productForm.value.id,
       "product_name": this.productForm.value.product_name,
@@ -68,6 +67,29 @@ export class ProductComponent implements OnInit {
     console.log(this.cleanedFormData);
 
     this.dS.putProductData(this.cleanedFormData).subscribe((data) => console.log(data));
+  }
+
+  postProductFormData() {
+
+    console.log(this.productForm.value);
+      // console.log(this.productForm.value.id);
+    this.cleanedFormData = {
+      "id": this.productForm.value.id,
+      "product_name": this.productForm.value.product_name,
+    "product_category": this.productForm.value.product_category,
+      "product_description": this.productForm.value.product_description,
+      "units_available": this.productForm.value.units_available,
+      "height": this.productForm.value.height,
+      "width": this.productForm.value.width,
+    "price": this.productForm.value.price,
+    "rating": this.productForm.value.rating
+    }
+
+    console.log(this.cleanedFormData);
+
+    this.dS.postProductData(this.cleanedFormData).subscribe((data) => console.log(data));
+
+
   }
   objectToFormData(objData: any) {
     this.productForm.setValue({

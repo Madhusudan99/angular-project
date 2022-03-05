@@ -1,4 +1,3 @@
-<p>product works!</p>
 <div class="container">
     
     <table class="table table-hover mt-5">
@@ -8,8 +7,8 @@
                 <th scope="col">Name</th>
                 <th scope="col">Category</th>
                 <th scope="col">Discription</th>
-                <th scope="col">Units Available</th>
-                <th scope="col">height</th>
+                <th scope="col">Units</th>
+                <th scope="col">Height</th>
                 <th scope="col">Width</th>
                 <th scope="col">Price</th>
                 <th scope="col">Rating</th>
@@ -48,7 +47,53 @@
         <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div class="modal-body">
-        <form [formGroup]="productForm" (ngSubmit)="ProductFormData()">
+        <form [formGroup]="productForm" *ngIf="!formIsNew" (ngSubmit)="updateProductFormData()">
+            <div class="form-row row">
+                <div class="form-group col-md-6">
+                    <label>Product Name</label>
+                    <input type="text" class="form-control" formControlName="product_name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Category</label>
+                    <input type="text" class="form-control" formControlName="product_category">
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Product Description</label>
+                <input type="text" class="form-control" formControlName="product_description">
+            </div><br>
+            <div class="form-group">
+                <label>Units Available</label>
+                <input type="text" class="form-control" formControlName="units_available">
+            </div>
+            <div class="form-row row">
+                <div class="form-group col-md-2">
+                    <label>height</label>
+                    <input type="text" class="form-control" formControlName="height">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Width</label>
+                    <input type="text" class="form-control" formControlName="width">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Price</label>
+                    <input type="text" class="form-control" formControlName="price">
+                </div>
+                <div class="form-group col-md-2">
+                    <label>Rating</label>
+                    <input type="text" class="form-control" formControlName="rating">
+                </div>
+            </div><br><br>
+            <br>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" *ngIf="!formIsNew" (click)="deleteProduct()">Delete</button>
+
+                <button type="submit" class="btn btn-primary" (click)="modal.dismiss('Cross click')">Submit</button>
+
+            </div>
+        </form>
+
+        <form [formGroup]="productForm" *ngIf="formIsNew" (ngSubmit)="postProductFormData()">
             <div class="form-row row">
                 <div class="form-group col-md-6">
                     <label>Product Name</label>
