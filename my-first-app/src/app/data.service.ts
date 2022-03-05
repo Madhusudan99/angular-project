@@ -8,6 +8,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
+  loggedIn = false;
   urls = {
     "buyerData": "http://localhost:3000/buyer_details/",
     "customerData": "http://localhost:3000/customer_details/",

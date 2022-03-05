@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-first-app';
+
+  constructor(public dS: DataService) { }
+
+  ngOnInit(): void  {
+
+  }
+
+  logout() {
+    this.dS.loggedIn = false;
+  }
+
 }
