@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './form/form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SellerFormComponent } from './seller-form/seller-form.component';
+import { LoginComponent } from './login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,11 +24,8 @@ import { SellerFormComponent } from './seller-form/seller-form.component';
     CustomerComponent,
     PageNotFoundComponent,
     FormComponent,
-<<<<<<< HEAD
-    SellerFormComponent
-=======
+    SellerFormComponent,
     LoginComponent
->>>>>>> 617343de4c77eef5e83254c1400e7cbc51c100ed
   ],
   imports: [
     BrowserModule,

@@ -9,10 +9,10 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   urls = {
-    "buyerData": "http://192.168.43.78:3000/buyer_details/",
-    "customerData": "http://192.168.2.169:3000/customer_details/",
-    "loginData": "http://192.168.43.78:3000/login_details/",
-    "sellerData": "http://192.168.2.169:3000/seller_details/"
+    "buyerData": "http:///192.168.43.34.78:3000/buyer_details/",
+    "customerData": "http:///192.168.43.34:3000/customer_details/",
+    "loginData": "http:///192.168.43.34.78:3000/login_details/",
+    "sellerData": "http:///192.168.43.34:3000/seller_details/"
   }
 
 
