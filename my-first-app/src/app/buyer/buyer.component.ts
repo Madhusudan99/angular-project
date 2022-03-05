@@ -16,7 +16,9 @@ export class BuyerComponent implements OnInit {
   buyerList: any;
   myForm: any;
   formIsNew = false;
+  cleanedFormData:any;
   emptyForm = {
+    "id": Math.floor(Math.random() * 10000),
     "buyer_name": "",
     "buyer_email": "",
     "buyer_address": {
@@ -43,6 +45,7 @@ export class BuyerComponent implements OnInit {
     this.dS.getBuyerData().subscribe((data) => this.addToBuyerList(data));
 
     this.myForm = this.fb.group({
+      Id:[''],
       BuyerName: ['', Validators.required],
       BuyerEmail: ['', [Validators.required, Validators.email]],
       // BuyerAddress: ['', Validators.required],
@@ -58,9 +61,59 @@ export class BuyerComponent implements OnInit {
     });
   }
 
-  BuyerFormData() {
+  updateBuyerFormData() {
     console.log(this.myForm.value);
+    this.cleanedFormData = {
+      "id": this.myForm.value.Id,
+      "buyer_name": this.myForm.value.BuyerName,
+      "buyer_email": this.myForm.value.BuyerEmail,
+      "buyer_address": {
+        "street": this.myForm.value.Street,
+        "suite": this.myForm.value.Suite,
+        "city": this.myForm.value.City,
+        "zipcode": this.myForm.value.Zipcode,
+      },
+      "phone": this.myForm.value.Phone,
+      "website": this.myForm.value.Website,
+      "company": {
+        "name": this.myForm.value.Name,
+        "catchPhrase": this.myForm.value.CatchPhrase,
+      },
+    }
+
+    console.log(this.cleanedFormData);
+
+    this.dS.putBuyerData(this.cleanedFormData).subscribe((data) => console.log(data));
+
   }
+
+
+  postBuyerFormData() {
+    console.log(this.myForm.value);
+    this.cleanedFormData = {
+      "id": this.myForm.value.Id,
+      "buyer_name": this.myForm.value.BuyerName,
+      "buyer_email": this.myForm.value.BuyerEmail,
+      "buyer_address": {
+        "street": this.myForm.value.Street,
+        "suite": this.myForm.value.Suite,
+        "city": this.myForm.value.City,
+        "zipcode": this.myForm.value.Zipcode,
+      },
+      "phone": this.myForm.value.Phone,
+      "website": this.myForm.value.Website,
+      "company": {
+        "name": this.myForm.value.Name,
+        "catchPhrase": this.myForm.value.CatchPhrase,
+      },
+    }
+
+    console.log(this.cleanedFormData);
+
+    this.dS.postBuyerData(this.cleanedFormData).subscribe((data) => console.log(data));
+
+  }
+
 
   // currentDate:any;
   objectToFormData(objData: any) {
@@ -69,6 +122,7 @@ export class BuyerComponent implements OnInit {
     // this.currentDate = new Date(Number(objData.date_of_birth.split("-")[0]), Number(objData.date_of_birth.split("-")[1]), Number(objData.date_of_birth.split("-")[2]));
     // console.log(objData.date_of_birth)
     this.myForm.setValue({
+      Id: objData.id,
       BuyerName: objData.buyer_name,
       BuyerEmail: objData.buyer_email,
       // BuyerAddress: ['', Validators.required],
@@ -107,5 +161,10 @@ export class BuyerComponent implements OnInit {
       this.objectToFormData(this.emptyForm);
     }
 
+  }
+
+  deleteBuyer() {
+    this.dS.deleteBuyerData(this.myForm.value.Id).subscribe();
+    this.modalService.dismissAll();
   }
 }

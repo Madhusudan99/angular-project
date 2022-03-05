@@ -9,20 +9,16 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   urls = {
-    "buyerData": "http:///192.168.43.34.78:3000/buyer_details/",
-    "customerData": "http:///192.168.43.34:3000/customer_details/",
-    "loginData": "http:///192.168.43.34.78:3000/login_details/",
-    "sellerData": "http:///192.168.43.34:3000/seller_details/",
-    "productData": "http:///192.168.43.34:3000/product/"
+    "buyerData": "http://localhost:3000/buyer_details/",
+    "customerData": "http://localhost:3000/customer_details/",
+    "loginData": "http://localhost:3000/login_details/",
+    "sellerData": "http://localhost:3000/seller_details/",
+    "productData": "http://localhost:3000/product/"
   }
 
 
   getCustomerData() {
     return this.http.get(this.urls.customerData);
-  }
-
-  getBuyerData() {
-    return this.http.get(this.urls.buyerData);
   }
   putCustomerData(data:any) {
     return this.http.put(this.urls.customerData+data.id, data);
@@ -58,5 +54,19 @@ export class DataService {
   }
   postProductData(data: any) {
     return this.http.post(this.urls.productData, data);
+  }
+
+
+  getBuyerData() {
+    return this.http.get(this.urls.buyerData);
+  }
+  putBuyerData(data: any) {
+    return this.http.put(this.urls.buyerData+data.id, data);
+  }
+  deleteBuyerData(id:any) {
+    return this.http.delete(this.urls.buyerData+id);
+  }
+  postBuyerData(data:any) {
+    return this.http.post(this.urls.buyerData, data);
   }
 }

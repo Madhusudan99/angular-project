@@ -182,6 +182,6 @@ export class CustomerComponent implements OnInit {
 
   deleteCustomer() {
     this.dS.deleteCustomerData(this.myForm.value.Id).subscribe();
-    this.modalService.dismissAll()
+    this.modalService.dismissAll();
   }
 }
