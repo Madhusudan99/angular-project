@@ -8,15 +8,16 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductComponent } from './product/product.component';
 import { SellerComponent } from './seller/seller.component';
 
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  {path:'',component:CustomerComponent},
-  {path:'customer',component:CustomerComponent},
-  {path:'customer/form',component:FormComponent},
-  {path:'product',component:ProductComponent},
-  {path:'buyer',component:BuyerComponent},
-  {path:'seller',component:SellerComponent},
-  {path:'form',component:FormComponent},
+  {path:'',component:LoginComponent},
+  {path:'customer',component:CustomerComponent, canActivate:[AuthGuard]},
+  {path:'customer/form',component:FormComponent, canActivate:[AuthGuard]},
+  {path:'product',component:ProductComponent, canActivate:[AuthGuard]},
+  {path:'buyer',component:BuyerComponent, canActivate:[AuthGuard]},
+  {path:'seller',component:SellerComponent, canActivate:[AuthGuard]},
+  {path:'form',component:FormComponent, canActivate:[AuthGuard]},
   {path:'login', component:LoginComponent},
   {path:'**',component:PageNotFoundComponent},
 
@@ -24,6 +25,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule], 
+  providers: [AuthGuard]
 })
 export class AppRoutingModule { }
