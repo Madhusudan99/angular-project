@@ -9,7 +9,7 @@
                 <th scope="col">Category</th>
                 <th scope="col">Discription</th>
                 <th scope="col">Units Available</th>
-                <th scope="col">Height</th>
+                <th scope="col">height</th>
                 <th scope="col">Width</th>
                 <th scope="col">Price</th>
                 <th scope="col">Rating</th>
@@ -17,8 +17,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let product of productList">
-                <th scope="row">{{product.id}}</th>
+            <tr *ngFor="let product of productList; let i = index">
+                <th scope="row">{{i+1}}</th>
                 <td>{{product.product_name}}</td>
                 <td>{{product.product_category}}</td>
                 <td>{{product.product_description}}</td>
@@ -52,24 +52,24 @@
             <div class="form-row row">
                 <div class="form-group col-md-6">
                     <label>Product Name</label>
-                    <input type="text" class="form-control" formControlName="productName">
+                    <input type="text" class="form-control" formControlName="product_name">
                 </div>
                 <div class="form-group col-md-6">
                     <label>Category</label>
-                    <input type="text" class="form-control" formControlName="category">
+                    <input type="text" class="form-control" formControlName="product_category">
                 </div>
             </div>
             <div class="form-group col-md-4">
                 <label>Product Description</label>
-                <input type="date" class="form-control" formControlName="description">
+                <input type="text" class="form-control" formControlName="product_description">
             </div><br>
             <div class="form-group">
                 <label>Units Available</label>
-                <input type="text" class="form-control" formControlName="unitsAvailable">
+                <input type="text" class="form-control" formControlName="units_available">
             </div>
             <div class="form-row row">
                 <div class="form-group col-md-2">
-                    <label>Height</label>
+                    <label>height</label>
                     <input type="text" class="form-control" formControlName="height">
                 </div>
                 <div class="form-group col-md-4">
@@ -96,4 +96,3 @@
     </div>
 
 </ng-template>
-

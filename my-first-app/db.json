@@ -336,7 +336,7 @@
   ],
   "product": [
     {
-      "product_id": 1,
+      "id": 1,
       "product_name": "Brown eggs",
       "product_category": "dairy",
       "product_description": "Raw organic brown eggs in a basket",
@@ -347,7 +347,7 @@
       "rating": 4
     },
     {
-      "product_id": 2,
+      "id": 2,
       "product_name": "Sweet fresh stawberry",
       "product_category": "fruit",
       "product_description": "Sweet fresh stawberry on the wooden table",
@@ -358,7 +358,7 @@
       "rating": 4
     },
     {
-      "product_id": 3,
+      "id": 3,
       "product_name": "Asparagus",
       "product_category": "vegetable",
       "product_description": "Asparagus with ham on the wooden table",
@@ -369,7 +369,7 @@
       "rating": 3
     },
     {
-      "product_id": 4,
+      "id": 4,
       "product_name": "Green smoothie",
       "product_category": "dairy",
       "product_description": "Glass of green smoothie with quail egg's yolk, served with cocktail tube, green apple and baby spinach leaves over tin surface.",
@@ -380,7 +380,7 @@
       "rating": 4
     },
     {
-      "product_id": 5,
+      "id": 5,
       "product_name": "Raw legums",
       "product_category": "vegetable",
       "product_description": "Raw legums on the wooden table",
@@ -391,7 +391,7 @@
       "rating": 2
     },
     {
-      "product_id": 6,
+      "id": 6,
       "product_name": "Baking cake",
       "product_category": "dairy",
       "product_description": "Baking cake in rural kitchen - dough  recipe ingredients (eggs, flour, sugar) on vintage wooden table from above.",
@@ -402,7 +402,7 @@
       "rating": 4
     },
     {
-      "product_id": 7,
+      "id": 7,
       "product_name": "Pesto with basil",
       "product_category": "vegetable",
       "product_description": "Italian traditional pesto with basil, chesse and oil",
@@ -413,7 +413,7 @@
       "rating": 2
     },
     {
-      "product_id": 8,
+      "id": 8,
       "product_name": "Hazelnut in black ceramic bowl",
       "product_category": "vegetable",
       "product_description": "Hazelnut in black ceramic bowl on old wooden background. forest wealth. rustic style. selective focus",
@@ -424,7 +424,7 @@
       "rating": 0
     },
     {
-      "product_id": 9,
+      "id": 9,
       "product_name": "Fresh stawberry",
       "product_category": "fruit",
       "product_description": "Sweet fresh stawberry on the wooden table",
@@ -435,7 +435,7 @@
       "rating": 4
     },
     {
-      "product_id": 10,
+      "id": 10,
       "product_name": "Lemon and salt",
       "product_category": "fruit",
       "product_description": "Rosemary, lemon and salt on the table",
@@ -446,7 +446,7 @@
       "rating": 5
     },
     {
-      "product_id": 11,
+      "id": 11,
       "product_name": "Homemade bread",
       "product_category": "bakery",
       "product_description": "Homemade bread",
@@ -457,7 +457,7 @@
       "rating": 3
     },
     {
-      "product_id": 12,
+      "id": 12,
       "product_name": "Legums",
       "product_category": "vegetable",
       "product_description": "Cooked legums on the wooden table",
@@ -468,7 +468,7 @@
       "rating": 0
     },
     {
-      "product_id": 13,
+      "id": 13,
       "product_name": "Fresh tomato",
       "product_category": "vegetable",
       "product_description": "Fresh tomato juice with basil",
