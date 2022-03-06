@@ -30,7 +30,7 @@
       </ul>
         <button  *ngIf="!dS.loggedIn" class="btn btn-primary" type="button" routerLink="/login">Login</button>
         <h6 *ngIf="dS.loggedIn" style="margin-right: 10px;">@madhusudanjha</h6>
-        <button  *ngIf="dS.loggedIn" class="btn btn-primary" type="button" (click)="logout()">Logout</button>
+        <button  *ngIf="dS.loggedIn" class="btn btn-primary" routerLink="/" type="button" (click)="logout()">Logout</button>
 
     </div>
   </div>
