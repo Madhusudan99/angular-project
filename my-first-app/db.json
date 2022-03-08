@@ -501,6 +501,17 @@
       "width": 400,
       "price": 28.1,
       "rating": "5"
+    },
+    {
+      "id": 5,
+      "product_name": "Raw legums",
+      "product_category": "vegetable",
+      "product_description": "Raw legums on the wooden table",
+      "units_available": 25,
+      "height": 450,
+      "width": 299,
+      "price": 17.11,
+      "rating": 2
     }
   ]
 }

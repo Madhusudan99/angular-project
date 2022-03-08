@@ -1,0 +1,30 @@
+<div class="container">
+    
+    <table class="table table-hover mt-5">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Units</th>
+                <th scope="col">Price</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of cartList; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{product.product_name}}</td>
+                <td>{{product.units_available}}</td>
+                <td>{{product.price}}</td>
+                <td>
+                    <button class="btn btn-primary" type="button">Pay</button>
+                </td>
+                <td>
+                    <button class="btn btn-primary" type="button">Remove From Cart</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

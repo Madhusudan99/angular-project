@@ -9,9 +9,11 @@ import { ProductComponent } from './product/product.component';
 import { SellerComponent } from './seller/seller.component';
 
 import { AuthGuard } from './auth.guard';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
+  {path:'cart',component:CartComponent, canActivate:[AuthGuard]},
   {path:'customer',component:CustomerComponent, canActivate:[AuthGuard]},
   {path:'customer/form',component:FormComponent, canActivate:[AuthGuard]},
   {path:'product',component:ProductComponent, canActivate:[AuthGuard]},
