@@ -14,7 +14,8 @@ export class DataService {
     "customerData": "http://localhost:3000/customer_details/",
     "loginData": "http://localhost:3000/login_details/",
     "sellerData": "http://localhost:3000/seller_details/",
-    "productData": "http://localhost:3000/product/"
+    "productData": "http://localhost:3000/product/",
+    "cartData": "http://localhost:3000/cart"
   }
 
 
@@ -69,5 +70,15 @@ export class DataService {
   }
   postBuyerData(data:any) {
     return this.http.post(this.urls.buyerData, data);
+  }
+
+
+
+  getCartItems() {
+    return this.http.get(this.urls.cartData);
+  }
+
+  postCartItems(data: any) {
+    return this.http.post(this.urls.cartData, data);
   }
 }

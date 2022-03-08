@@ -478,5 +478,29 @@
       "price": 16.3,
       "rating": 2
     }
+  ],
+  "cart": [
+    {
+      "id": 13,
+      "product_name": "Fresh tomato",
+      "product_category": "vegetable",
+      "product_description": "Fresh tomato juice with basil",
+      "units_available": 25,
+      "height": 600,
+      "width": 903,
+      "price": 16.3,
+      "rating": 2
+    },
+    {
+      "id": 1,
+      "product_name": "White eggs",
+      "product_category": "dairy",
+      "product_description": "Raw organic brown eggs in a basket",
+      "units_available": 25,
+      "height": 600,
+      "width": 400,
+      "price": 28.1,
+      "rating": "5"
+    }
   ]
 }

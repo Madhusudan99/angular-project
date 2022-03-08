@@ -144,4 +144,9 @@ closeResult = '';
     this.productList.splice(this.index, 1);
 
   }
+
+  add2Cart(data: any)  {
+    console.log(data);
+    this.dS.postCartItems(data).subscribe((data) => console.log(data));
+  }
 }

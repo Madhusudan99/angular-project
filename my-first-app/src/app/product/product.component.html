@@ -13,6 +13,7 @@
                 <th scope="col">Price</th>
                 <th scope="col">Rating</th>
                 <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +29,10 @@
                 <td>{{product.rating}}</td>
                 <td>
                     <button class="btn btn-primary" type="button" (click)="open(content, product, i)">Load</button>
+                </td>
+
+                <td>
+                    <button class="btn btn-primary" type="button" (click)="add2Cart(product)" style="width: 150px;">Add To Cart</button>
                 </td>
             </tr>
         </tbody>
