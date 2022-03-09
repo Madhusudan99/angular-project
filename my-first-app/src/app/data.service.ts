@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { catchError, retry } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,9 @@ export class DataService {
     "loginData": "http://localhost:3000/login_details/",
     "sellerData": "http://localhost:3000/seller_details/",
     "productData": "http://localhost:3000/product/",
-    "cartData": "http://localhost:3000/cart"
+    "cartData": "http://localhost:3000/cart/",
+    "paymentData": "http://localhost:3000/payment_details/", 
+    "orderHistory": "http://localhost:3000/payment_details/"
   }
 
 
@@ -80,5 +83,50 @@ export class DataService {
 
   postCartItems(data: any) {
     return this.http.post(this.urls.cartData, data);
+  }
+  deleteCartItem(id: any) {
+    return this.http.delete(this.urls.cartData+id);
+  }
+  handleError(data: any) {
+    return data.status;
+  }
+  putCartItems(data: any) {
+    return this.http.put(this.urls.cartData+data.id, data).pipe(
+      catchError(this.handleError(data)) // then handle the error
+    );
+  }
+
+  pushPaymentData(data:any) {
+    return this.http.post(this.urls.paymentData, data);
+  }
+
+  getProductDataById(data:any){
+    return this.http.get(this.urls.productData+data);
+  }
+
+  transactionid=1000000;
+  paymentdata:any;
+  data:any;
+  i:number=0;
+  transid=0;
+  dummy:any;
+  
+  storeTransaction(data:any){
+    this.dummy = data.length;
+    // console.log(this.transactionid+this.dummy);
+    this.dummy += this.transactionid;
+  }
+
+  getTransactionId():any{
+    this.http.get(this.urls.paymentData).subscribe((data)=>{
+      this.storeTransaction(data);
+    });
+  }
+
+  paymentauthentication:boolean=false;
+  username:any=null;
+
+  getOrderHistory() {
+    return this.http.get(this.urls.orderHistory);
   }
 }

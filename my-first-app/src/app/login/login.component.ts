@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
    if (this.email == "admin@mail.com" && this.password == "admin") {
      console.log("Match");
      this.dS.loggedIn = true;
+     this.dS.username="admin@mail.com";
    }
   }
 }

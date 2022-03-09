@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from '../data.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { DataService } from '../data.service';
 })
 export class CartComponent implements OnInit {
 
-  constructor(private dS: DataService) { }
+  constructor(private dS: DataService, private router: Router) { }
 
 
   cartList: any;
@@ -20,4 +21,14 @@ export class CartComponent implements OnInit {
     this.dS.getCartItems().subscribe((data) => this.addToCartList(data));
   }
 
+  removeItem(data: any, index: any) {
+    this.dS.deleteCartItem(data.id).subscribe();
+    this.cartList.splice(index, 1);
+  }
+
+  payment(data:any)  {
+    this.dS.paymentdata = data;    
+    this.dS.paymentauthentication=true;
+    this.router.navigate(['/', 'payment']);
+  }
 }

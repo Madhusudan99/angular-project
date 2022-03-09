@@ -10,10 +10,15 @@ import { SellerComponent } from './seller/seller.component';
 
 import { AuthGuard } from './auth.guard';
 import { CartComponent } from './cart/cart.component';
+import { PaymentComponent } from './payment/payment.component';
+import { AdminComponent } from './admin/admin.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'cart',component:CartComponent, canActivate:[AuthGuard]},
+  {path:'orders',component:OrderHistoryComponent, canActivate:[AuthGuard]},
+  {path:'payment',component:PaymentComponent, canActivate:[AuthGuard]},
   {path:'customer',component:CustomerComponent, canActivate:[AuthGuard]},
   {path:'customer/form',component:FormComponent, canActivate:[AuthGuard]},
   {path:'product',component:ProductComponent, canActivate:[AuthGuard]},
@@ -21,6 +26,7 @@ const routes: Routes = [
   {path:'seller',component:SellerComponent, canActivate:[AuthGuard]},
   {path:'form',component:FormComponent, canActivate:[AuthGuard]},
   {path:'login', component:LoginComponent},
+  {path:'admin',component:AdminComponent,canActivate:[AuthGuard]},
   {path:'**',component:PageNotFoundComponent},
 
 ];

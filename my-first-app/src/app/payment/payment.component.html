@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-2">
+            <div class="card p-3">
+                <p class="mb-0 fw-bold h4">Payment Method</p>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="card p-3">
+                <div class="card-body p-0">
+                    <p class="btn border btn-primary p-2 w-100 h-100 d-flex align-items-center justify-content-between" role="button"> 
+                        <span class="fw-bold">Credit Card</span>
+                    </p>
+                    <div class="collapse show pt-0 w-100 mt-3">
+                        <div class="row">
+                            <div class="col-lg-5 mb-lg-0 mb-3">
+                                <p class="h4 mb-0">Summary</p>
+                                <table>
+                                    <tbody>
+                                        <tr class="m-2">
+                                            <th>Product:</th>
+                                            <td>{{productdata.product_name}}</td>
+                                        </tr>
+                                        <tr class="m-2">
+                                            <th>Price:</th>
+                                            <td>{{productdata.price}}</td>
+                                        </tr>
+                                        <tr class="m-2">
+                                            <th>Transaction:</th>
+                                            <td>#{{this.dS.dummy}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-lg-7">
+                                <form [formGroup]="paymentForm" *ngIf="paymentForm" (ngSubmit)="payment()" class="form">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form__div"> <input type="text" formControlName="cardNo" class="form-control" > <label for="" class="form__label">Card Number</label> </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form__div"> <input type="text" class="form-control" formControlName="dateyear" > <label for="" class="form__label">MM / YY</label> </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form__div"> <input type="password" class="form-control" formControlName="cvvCode" > <label for="" class="form__label">CVV Code</label> </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form__div"> <input type="text" class="form-control" formControlName="nameonCard"> <label for="" class="form__label">Name On The Card</label> </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-success w-100">Make Payment</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="btn btn-primary payment mt-5" (click)="updateproduct()"> Pay on Delivery </div>
+        </div>
+    </div>
+</div>

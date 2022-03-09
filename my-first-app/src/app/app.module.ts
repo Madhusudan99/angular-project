@@ -14,6 +14,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SellerFormComponent } from './seller-form/seller-form.component';
 import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
+import { PaymentComponent } from './payment/payment.component';
+import { AdminComponent } from './admin/admin.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { CartComponent } from './cart/cart.component';
     FormComponent,
     SellerFormComponent,
     LoginComponent,
-    CartComponent
+    CartComponent,
+    PaymentComponent,
+    AdminComponent,
+    OrderHistoryComponent
   ],
   imports: [
     BrowserModule,

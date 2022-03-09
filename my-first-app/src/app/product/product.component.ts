@@ -147,6 +147,8 @@ closeResult = '';
 
   add2Cart(data: any)  {
     console.log(data);
+    data.units_available = 1;
     this.dS.postCartItems(data).subscribe((data) => console.log(data));
   }
+  
 }
